@@ -1,23 +1,24 @@
 {
   "name": "pofile",
   "description": "Parse and serialize Gettext PO files.",
-  "version": "1.1.3",
+  "version": "1.1.5",
   "author": {
-    "name": "Ruben Vermeersch",
-    "email": "ruben@savanne.be",
-    "url": "http://savanne.be/"
+    "name": "Vasiliy Tolstov",
+    "email": "v.tolstov@unistack.org",
+    "url": "https://unistack.org"
   },
   "contributors": [
     "Eyal Lewinsohn",
     "Gabe Gorelick",
     "Julian Bäume",
     "Mike Holly",
-    "Sander Houttekier"
+    "Sander Houttekier",
+    "Vasiliy Tolstov"
   ],
-  "homepage": "http://github.com/rubenv/pofile",
+  "homepage": "http://github.com/unistack-org/pofile",
   "repository": {
     "type": "git",
-    "url": "http://github.com/rubenv/pofile.git"
+    "url": "http://github.com/unistack-org/pofile.git"
   },
   "main": "./lib/po",
   "types": "./pofile.d.ts",

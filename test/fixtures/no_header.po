@@ -1,8 +1,0 @@
-# some comment
-
-msgid "First id, no header"
-msgstr ""
-
-msgid "A second string"
-msgstr ""
-

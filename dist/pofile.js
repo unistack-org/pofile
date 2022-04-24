@@ -1,6 +1,4 @@
-require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-
-},{}],"pofile":[function(require,module,exports){
+require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({"pofile":[function(require,module,exports){
 function trim(string) {
     return string.replace(/^\s+|\s+$/g, '');
 }
@@ -13,9 +11,6 @@ var PO = function () {
     this.items = [];
 };
 
-PO.prototype.save = function (filename, callback) {
-    require('fs').writeFile(filename, this.toString(), callback);
-};
 
 PO.prototype.toString = function () {
     var lines = [];
@@ -63,16 +58,6 @@ PO.prototype.toString = function () {
     });
 
     return lines.join('\n');
-};
-
-PO.load = function (filename, callback) {
-    require('fs').readFile(filename, 'utf-8', function (err, data) {
-        if (err) {
-            return callback(err);
-        }
-        var po = PO.parse(data);
-        callback(null, po);
-    });
 };
 
 PO.parse = function (data) {
@@ -402,4 +387,4 @@ PO.Item.prototype.toString = function () {
 
 module.exports = PO;
 
-},{"fs":1}]},{},["pofile"]);
+},{}]},{},["pofile"]);

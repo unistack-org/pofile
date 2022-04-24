@@ -23,8 +23,6 @@ declare class Item {
     public flags: Record<string, boolean | undefined>;
     public obsolete: boolean;
     private nplurals: number;
-
-    public toString(): string;
 }
 
 declare class PO {
@@ -35,11 +33,7 @@ declare class PO {
 
     public static parse(data: string): PO;
     public static parsePluralForms(forms: string): PO;
-    public static load(fileName: string, callback: (err: NodeJS.ErrnoException, po: PO) => void): void;
     public static Item: typeof Item;
-
-    public save(fileName: string, callback: (err: NodeJS.ErrnoException) => void): void;
-    public toString(): string;
 }
 
 export = PO
